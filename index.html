@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="container">
+            <label for="symbol" class="input-group">
+                <span>SYMBOL</span>
+                <input type="text" id="symbol" name="simbol" placeholder="Simbol"/>
+            </label>
+            <button id="add-symbol">Add</button>
+            <label for="state" class="input-group">
+                <span>STACK SYMBOL</span>
+                <input type="text" id="stack-symbol" name="stack-simbol" placeholder="Stack Simbol"/>
+            </label>
+            <button id="add-stack-symbol">Add</button>
+            <label for="state" class="input-group">
+                <span>STATE</span>
+                <input type="text" id="state" name="state" placeholder="State"/>
+            </label>
+            <button id="add-state">Add</button>
+            <div>
+                <span>Initial State</span>
+                <select name="initial-state" id="initial-state" class="state-list">
+                </select>
+            </div>
+            <div>
+                <span>Final State</span>
+                <select name="final-state" id="final-state" class="state-list">
+                </select>
+            </div>
+            <div>
+                <span>Transition</span>
+                <div>
+                    <span>Current State</span>
+                    <select name="transition-symbol" id="from-state" class="state-list">
+                    </select>
+                </div>
+                <div>
+                    <span>Symbol</span>
+                    <select name="transition-symbol" id="symbol-read" class="transition-symbol to-read">
+                    </select>
+                </div>
+                <div>
+                    <span>Read from stack</span>
+                    <div id="from-stack-symbols">
+                        <select name="transition-symbol" class="stack-symbol from-stack">
+                        </select>
+                    </div>
+                    <button id="add-read">Add new Symbol</button>
+                    <button id="delete-read">Delete Symbol</button>
+                </div>
+                <div>
+                    <span>Write to stack</span>
+                    <div id="to-stack-symbols">
+                        <select name="transition-symbol" class="stack-symbol to-stack">
+                        </select>
+                    </div>
+                    <button id="add-push">Add new Symbol</button>
+                    <button id="delete-push">Delete Symbol</button>
+                </div>
+                <div>
+                    <span>Next State</span>
+                    <select name="transition-symbol" id="to-state" class="state-list">
+                    </select>
+                </div>
+                <button id="add-transition">Add</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="states-container" class="container">
+                <h2>States</h2>
+            </div>
+            <div id="simbols-container" class="container">
+                <h2>Symbols</h2>
+            </div>
+            <div id="transition-table" class="container">
+                <h2>Transition Table</h2>
+            </div>
+        </div>
+    </div>
+    <button id="get">Resolve</button>
+    <div id="resolution">
+        <h2>Resolution</h2>
+        <div id="first-rule">
+            <h3>First Rule</h3>
+            <div id="first-rule-steps">
+            </div>
+        </div>
+        <div id="second-rule">
+            <h3>Second Rule</h3>
+            <div id="second-rule-steps">
+            </div>
+        </div>
+        <div id="third-rule">
+            <h3>Third Rule</h3>
+            <div id="third-rule-steps">
+            </div>
+        </div>
+    </div>
+    <div id="fourth-rule">
+        <h3>Fourth</h3>
+        <div id="fourth-rule-steps">
+        </div>
+    </div>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
